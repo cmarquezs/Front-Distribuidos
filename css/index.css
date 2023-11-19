@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --theme-color: #fff;
+    --text-color: black;
+    --hover-color: rgb(199, 228, 227);
+    --font-type-1: 'Merriweather';
+    --btn-color: #376467;
+    --font-type-2: 'Open Sans';
+  }
+.marketing .featurette h2{
+    font-family: var(--font-type-2) !important;
+    color: var(--text-color) !important;
+}
+p{
+    color: var(--text-color);
+}

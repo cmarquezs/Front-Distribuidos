@@ -1,0 +1,62 @@
+/* Estilos globales aquí */
+:root {
+    --theme-color: #fff;
+    --text-color: black;
+    --hover-color: rgb(199, 228, 227);
+    --font-type-1: 'Merriweather';
+    --btn-color: #376467;
+    --font-type-2: 'Open Sans';
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+p{
+color: var(--text-color);
+  }
+#titulo{
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: var(--text-color);
+    font-family: var(--font-type-1)
+}
+
+.navbar-nav a{
+  font-size: 22px;
+  text-transform: uppercase;
+}
+hr{
+  border-width: 5px;
+}
+.row p a{
+  background-color: var(--btn-color);
+}
+
+/* Estilos para laptops y desktops */
+@media only screen and (min-width: 1025px) {
+  
+  .navbar-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+    margin: 0 auto;
+    height: 50px; /* Añadido para ajustar la altura del navbar */
+    line-height: 50px; /* Añadido para ajustar la altura del navbar */
+    align-items: center;
+  }
+  .navbar a{
+    font-family: var(--font-type)
+  }
+  .navbar-nav a{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-family: var(--font-type-1);
+  }
+  .navbar-nav .nav-link {
+    padding-left: 4rem !important; 
+    padding-right: 4rem !important;
+  }
+  .navbar-nav li:hover{
+    background-color: var(--hover-color);
+  }
+  
+}
