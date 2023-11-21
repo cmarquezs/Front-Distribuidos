@@ -10,5 +10,13 @@ function loadHeaderContent() {
         })
         .catch(error => console.error('Error fetching footer content:', error));
 }
-
+function loadFooterContent() {
+    fetch('view-footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footer.innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching footer content:', error));
+}
 loadHeaderContent();
+loadFooterContent();
