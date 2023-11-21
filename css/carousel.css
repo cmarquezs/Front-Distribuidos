@@ -89,3 +89,9 @@ body {
     margin-top: 7rem;
   }
 }
+
+@media only screen and (min-width: 1025px){
+  .container .marketing{
+    margin: 2rem;
+  }
+}
