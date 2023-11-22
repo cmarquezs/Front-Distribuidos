@@ -20,3 +20,18 @@ function loadFooterContent() {
 }
 loadHeaderContent();
 loadFooterContent();
+
+
+
+//  Script login
+
+function loadAdminContent(){
+    // Obtén el formulario
+    var form = document.getElementById('loginForm');
+        
+    // Simula el envío del formulario (puedes agregar validaciones aquí si es necesario)
+    form.submit();
+
+    // Redirige a la página view-admin-panel
+    window.location.href = 'view-admin-panel.html';
+}

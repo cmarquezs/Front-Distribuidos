@@ -18,10 +18,10 @@
 <body>
     <header></header>
     <main class="form-signin w-100 m-auto">
-        <form>
+        <form id="loginForm">
             <center><img class="mb-4" src="assets/logo.png" alt="" width="200" height="200"></center>
-           <center><h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1></center> 
-
+            <center><h1 class="h3 mb-3 fw-normal">Ingrese sus datos</h1></center> 
+        
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Email</label>
@@ -30,15 +30,15 @@
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Contraseña</label>
             </div>
-            <button class="btn btn-success w-100 py-2" type="submit">Ingresar</button>
+            <button class="btn btn-success w-100 py-2" type="button" onclick="loadAdminContent()">Ingresar</button>
         </form>
         <br>
-        <center><a href="#.html">Recuperar contraseña</a></center> 
+        <center><a href="#">Recuperar contraseña</a></center> 
     </main>
     <hr>
     <footer></footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js"></script> 
 </body>
 
 </html>
