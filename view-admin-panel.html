@@ -25,8 +25,6 @@
                     onclick="showClients()"><i class="fa-solid fa-circle-user me-2"></i>Clientes</a>
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
                     onclick="showMotos()"><i class="fa-solid fa-motorcycle me-2"></i>Motos</a>
-                <a href="#" class="list-group-item list-group-item-action bg-transparent second-text fw-bold"
-                    onclick="showSucursales()"><i class="fa-solid fa-shop me-2"></i>Sucursales</a>
 
                 <a href="#" class="list-group-item list-group-item-action bg-transparent text-danger fw-bold"
                     onclick="closeAccount()"><i class="fas fa-power-off me-2"></i>Salir
@@ -183,7 +181,7 @@
 
                 </div>
 
-                <div class="row my-5" id="content-motos" style="display: block;">
+                <div class="row my-5" id="content-motos" style="display: none;">
                     <h3>Inventario motocicletas</h3>
                     <button class="col-md-2 btn btn-primary" data-bs-toggle="modal"
                         data-bs-target="#addMotoModal">Agregar Moto</button>
@@ -251,16 +249,6 @@
                     </table>
                 </div>
 
-                <div class="row my-5" id="content-sucursales" style="display: none;">
-                    <!-- Contenido de la sección de Analytics -->
-                    <h1>Sucursales</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquid? Numquam, excepturi
-                        rerum. Aperiam nostrum voluptates quis sed molestias natus, aliquid soluta. Amet explicabo,
-                        laudantium odio illum delectus ratione aliquam.</p>
-                    <!-- ... (tu código existente para la sección Analytics) -->
-                </div>
-                <!-- Puedes agregar más secciones de contenido para otros elementos del menú -->
-
                 <br>
             </div>
         </div>
@@ -282,7 +270,6 @@
         function showClients() {
             document.getElementById("content-clients").style.display = "block";
             document.getElementById("content-motos").style.display = "none";
-            document.getElementById("content-sucursusales").style.display = "none";
             // Ocultar otras secciones si es necesario
         }
 
@@ -290,17 +277,10 @@
         function showMotos() {
             document.getElementById("content-clients").style.display = "none";
             document.getElementById("content-motos").style.display = "block";
-            document.getElementById("content-sucursusales").style.display = "none";
             // Ocultar otras secciones si es necesario
         }
 
-        // Función para mostrar el contenido de Analytics
-        function showSucursales() {
-            document.getElementById("content-clients").style.display = "none";
-            document.getElementById("content-motos").style.display = "none";
-            document.getElementById("content-sucursales").style.display = "block";
-            // Ocultar otras secciones si es necesario
-        }
+        
 
         function closeAccount() {
             // Puedes agregar cualquier lógica de cierre de sesión si es necesario

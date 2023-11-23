@@ -24,17 +24,27 @@ loadFooterContent();
 
 
 //  Script login
-
 function loadAdminContent() {
-    // Obtén el formulario
-    var form = document.getElementById('loginForm');
 
-    // Simula el envío del formulario (puedes agregar validaciones aquí si es necesario)
-    form.submit();
-
-    // Redirige a la página view-admin-panel
-    window.location.href = 'view-admin-panel.html';
-}
+    // Obtener los valores ingresados
+    var email = document.getElementById("floatingInput").value;
+    var password = document.getElementById("floatingPassword").value;
+  
+    // Validaciones
+    if(email == "admin@motofacil.co" && password == "1234") {
+       
+      // Redirige a la página view-admin-panel.html 
+      window.location.href = 'view-admin-panel.html';
+  
+    } else {
+       
+      // Si falla la validación, mostrar mensaje de error
+      alert("Datos de acceso incorrectos");
+  
+    }
+  
+  }
+loadAdminContent();
 
 
 
