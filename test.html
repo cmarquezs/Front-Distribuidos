@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Clientes</title>
+</head>
+<body>
+
+  <h1>Tabla de Clientes</h1>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID Cliente</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>ID Concesionario</th>
+      </tr>
+    </thead>
+    <tbody id="tablaClientesBody">
+      <!-- Aquí se llenarán los datos de la API -->
+    </tbody>
+  </table>
+
+  <script>
+    // Función para realizar la solicitud GET a la API
+    function obtenerDatos() {
+      fetch('http://localhost:3000/listclients')
+        .then(response => response.json())
+        .then(data => {
+          // Llenar la tabla con los datos obtenidos
+          llenarTabla(data);
+        })
+        .catch(error => console.error('Error al obtener datos:', error));
+    }
+
+    // Función para llenar la tabla con los datos de la API
+    function llenarTabla(datos) {
+      var tablaBody = document.getElementById('tablaClientesBody');
+
+      // Limpiar el contenido previo de la tabla
+      tablaBody.innerHTML = '';
+
+      // Iterar sobre los datos y agregar filas a la tabla
+      datos.forEach(cliente => {
+        var fila = document.createElement('tr');
+
+        // Crear celdas y asignar valores
+        var idClienteCell = document.createElement('td');
+        idClienteCell.textContent = cliente.Id_cliente;
+        fila.appendChild(idClienteCell);
+
+        var nombreCell = document.createElement('td');
+        nombreCell.textContent = cliente.Nombre;
+        fila.appendChild(nombreCell);
+
+        var apellidoCell = document.createElement('td');
+        apellidoCell.textContent = cliente.Apellido;
+        fila.appendChild(apellidoCell);
+
+        var concesionarioIdCell = document.createElement('td');
+        concesionarioIdCell.textContent = cliente.ConcesionarioID;
+        fila.appendChild(concesionarioIdCell);
+
+        // Agregar la fila a la tabla
+        tablaBody.appendChild(fila);
+      });
+    }
+
+    // Llamar a la función para obtener y mostrar los datos al cargar la página
+    obtenerDatos();
+  </script>
+
+</body>
+</html>

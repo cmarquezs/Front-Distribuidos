@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
 
     <link rel="stylesheet" href="css/stylesDashboard.css" />
-    <title>Bootstap 5 Responsive Admin Dashboard</title>
+
+    <title>Admin - Dashboard</title>
 </head>
 
 <body>
     <div class="d-flex" id="wrapper">
         <!-- Sidebar -->
-        <div class="bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom"><i
-                    class="fas fa-user-secret me-2"></i>Motofacil</div>
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold text-uppercase border-bottom">
+                <i><img src="assets/logo.png" height="50" alt=""></i>Motofacil
+            </div>
             <div class="list-group list-group-flush my-3">
                 <a href="#" class="list-group-item list-group-item-action bg-transparent second-text active"
                     onclick="showClients()"><i class="fa-solid fa-circle-user me-2"></i>Clientes</a>
@@ -37,11 +39,11 @@
         <div id="page-content-wrapper">
             <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4 px-4">
                 <div class="d-flex align-items-center">
-                    <i class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
+                    <i style="color: white;" class="fas fa-align-left primary-text fs-4 me-3" id="menu-toggle"></i>
                     <h2 class="fs-2 m-0">Dashboard</h2>
                 </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -64,26 +66,26 @@
                 </div>
             </nav>
 
-            <div class="container-fluid px-4" style="background-color: azure;">
+            <div class="container-fluid px-4" style="background-color: #D0D3D4;">
                 <div class="row g-3 my-2">
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">720</h3>
-                                <p class="fs-5">Products</p>
+                                <h3 id="ctd-clientes" class="fs-2 text-center">0</h3>
+                                <p class="fs-5">Clientes</p>
                             </div>
-                            <i class="fas fa-gift fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                            <i class="fa-solid fa-user fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
                     </div>
 
                     <div class="col-md-3">
                         <div class="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                             <div>
-                                <h3 class="fs-2">4920</h3>
-                                <p class="fs-5">Sales</p>
+                                <h3 id="ctd-motos" class="fs-2 text-center">0</h3>
+                                <p class="fs-5">Motos</p>
                             </div>
                             <i
-                                class="fas fa-hand-holding-usd fs-1 primary-text border rounded-full secondary-bg p-3"></i>
+                                class="fa-solid fa-motorcycle fs-1 primary-text border rounded-full secondary-bg p-3"></i>
                         </div>
                     </div>
 
@@ -108,103 +110,145 @@
                     </div>
                 </div>
 
-                <div class="row my-5" id="content-clients">
-                    <h3 class="fs-4 mb-3">Recent Orders</h3>
-                    <div class="col">
-                        <table class="table bg-white rounded shadow-sm  table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="50">#</th>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Customer</th>
-                                    <th scope="col">Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>Television</td>
-                                    <td>Jonny</td>
-                                    <td>$1200</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Laptop</td>
-                                    <td>Kenny</td>
-                                    <td>$750</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>Cell Phone</td>
-                                    <td>Jenny</td>
-                                    <td>$600</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">4</th>
-                                    <td>Fridge</td>
-                                    <td>Killy</td>
-                                    <td>$300</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">5</th>
-                                    <td>Books</td>
-                                    <td>Filly</td>
-                                    <td>$120</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">6</th>
-                                    <td>Gold</td>
-                                    <td>Bumbo</td>
-                                    <td>$1800</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">7</th>
-                                    <td>Pen</td>
-                                    <td>Bilbo</td>
-                                    <td>$75</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">8</th>
-                                    <td>Notebook</td>
-                                    <td>Frodo</td>
-                                    <td>$36</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">9</th>
-                                    <td>Dress</td>
-                                    <td>Kimo</td>
-                                    <td>$255</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">10</th>
-                                    <td>Paint</td>
-                                    <td>Zico</td>
-                                    <td>$434</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">11</th>
-                                    <td>Carpet</td>
-                                    <td>Jeco</td>
-                                    <td>$1236</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">12</th>
-                                    <td>Food</td>
-                                    <td>Haso</td>
-                                    <td>$422</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <div class="row my-5 container" id="content-clients">
+                    <h3 class="fs-4 mb-3">Lista de Clientes</h3>
+                    <button class="col-md-2 btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#addClientModal">Agregar cliente</button>
+
+                    <!-- Modal Registrar Cliente -->
+                    <div class="modal fade" id="addClientModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addClientModalLabel">Registrar nuevo cliente</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <p>Por favor diligencia el formulario para el nuevo registro</p>
+                                    <form action="http://localhost:3000/cliente/add" method="post">
+                                        <div class="col-md-6">
+                                            <label for="idCliente" class="form-label">ID Cliente</label>
+                                            <input class="form-control" type="number" name="Id_cliente" id="idCliente">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Nombre">Nombre:</label>
+                                            <input class="form-control" type="text" name="Nombre" id="Nombre" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Apellido">Apellido:</label>
+                                            <input class="form-control" type="text" name="Apellido" id="Apellido" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="ConcesionarioID">ID Concesionario:</label>
+                                            <input class="form-control" type="number" name="ConcesionarioID"
+                                                id="ConcesionarioID" /><br>
+                                        </div>
+
+                                        <!-- <button type="button" class="btn btn-secondary col-md-4" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success center col-md-4">Agregar Cliente</button> -->
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button type="button" class="btn btn-secondary col-md-4"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-success ms-3">Agregar Cliente</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Modal Editar Cliente -->
+
+
+
+                    <!-- Tabla Lista Clientes -->
+                    <table class="table table-bordered table-striped text-center mt-4">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col">ID</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Apellido</th>
+                                <th scope="col">ID Concesionario</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaClientesBody" class="bg-light">
+                            <!-- Aquí se llenarán los datos de la API -->
+                        </tbody>
+
+                    </table>
+
+
                 </div>
 
-                <div class="row my-5" id="content-motos" style="display: none;">
-                    <!-- Contenido de la sección de Analytics -->
-                    <h1>Analytics</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, aliquid? Numquam, excepturi
-                        rerum. Aperiam nostrum voluptates quis sed molestias natus, aliquid soluta. Amet explicabo,
-                        laudantium odio illum delectus ratione aliquam.</p>
-                    <!-- ... (tu código existente para la sección Analytics) -->
+                <div class="row my-5" id="content-motos" style="display: block;">
+                    <h3>Inventario motocicletas</h3>
+                    <button class="col-md-2 btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#addMotoModal">Agregar Moto</button>
+
+                    <!-- Modal Registrar Motos -->
+                    <div class="modal fade" id="addMotoModal" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addMotosModalLabel">Registrar nueva Moto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body ">
+                                    <p>Por favor diligencia el formulario para el nuevo registro</p>
+                                    <form action="http://localhost:3000/motos/add" method="post">
+                                        <div class="col-md-6">
+                                            <label for="idMoto" class="form-label">ID Moto</label>
+                                            <input class="form-control" type="number" name="Id_moto" id="idMoto">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Modelo">Modelo:</label>
+                                            <input class="form-control" type="number" name="Modelo" id="Modelo" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Marca">Marca:</label>
+                                            <input class="form-control" type="text" name="Marca" id="Marca" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="Precio">Precio:</label>
+                                            <input class="form-control" type="number" name="Precio" id="Precio" /><br>
+                                        </div>
+
+                                        <!-- <button type="button" class="btn btn-secondary col-md-4" data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-success center col-md-4">Agregar Cliente</button> -->
+                                        <div class="modal-footer d-flex justify-content-center">
+                                            <button type="button" class="btn btn-secondary col-md-4"
+                                                data-bs-dismiss="modal">Cerrar</button>
+                                            <button type="submit" class="btn btn-success ms-3">Agregar Moto</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!-- Tabla Lista Motos -->
+                    <table class="table table-bordered table-striped text-center mt-4">
+                        <thead>
+                            <tr class="bg-primary text-white">
+                                <th scope="col">ID</th>
+                                <th scope="col">Modelo</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tablaMotosBody" class="bg-light">
+                            <!-- Aquí se llenarán los datos de la API -->
+                        </tbody>
+
+                    </table>
                 </div>
 
                 <div class="row my-5" id="content-sucursales" style="display: none;">
@@ -217,13 +261,14 @@
                 </div>
                 <!-- Puedes agregar más secciones de contenido para otros elementos del menú -->
 
-
+                <br>
             </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
     </div>
 
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         var el = document.getElementById("wrapper");
@@ -264,6 +309,115 @@
         }
 
 
+        // *********** Funciones Clientes ************** 
+
+        function obtenerDatos() {
+            // Cuando la ventana está completamente cargada, realiza la solicitud al servidor
+            fetch('http://localhost:3000/listclients')
+                .then(response => {
+                    console.log('Server Response:', response);
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data from Server:', data);
+                    llenarTabla(data);
+                })
+                .catch(error => console.error('Error fetching data:', error));
+        };
+
+        function llenarTabla(datos) {
+            var tablaBody = document.getElementById('tablaClientesBody');
+
+            // Limpiar el contenido previo de la tabla
+            tablaBody.innerHTML = '';
+
+            // Iterar sobre los datos y agregar filas a la tabla
+            datos.forEach(cliente => {
+                var fila = document.createElement('tr');
+
+                // Crear celdas y asignar valores
+                var idClienteCell = document.createElement('td');
+                var nombreCell = document.createElement('td');
+                var apellidoCell = document.createElement('td');
+                var concesionarioIdCell = document.createElement('td');
+                var accionesCell = document.createElement('td');
+
+                idClienteCell.textContent = cliente.Id_cliente;
+                nombreCell.textContent = cliente.Nombre;
+                apellidoCell.textContent = cliente.Apellido;
+                concesionarioIdCell.textContent = cliente.ConcesionarioID;
+
+                // Crear botones de editar y borrar
+                var botonEditar = document.createElement('button');
+                botonEditar.textContent = 'Editar';
+                botonEditar.className = 'btn btn-outline-info';
+                botonEditar.style.marginRight = '8px';
+                botonEditar.addEventListener('click', function () {
+                    // Lógica para editar el cliente
+                    alert('Editar cliente con ID ' + cliente.Id_cliente);
+
+                });
+                accionesCell.appendChild(botonEditar);
+
+                var botonBorrar = document.createElement('button');
+                botonBorrar.textContent = 'Borrar';
+                botonBorrar.className = 'btn btn-outline-danger';
+                botonBorrar.addEventListener('click', function () {
+                    // Lógica para borrar el cliente
+                    alert('Eliminar cliente con ID ' + cliente.Id_cliente);
+                    borrarCliente(cliente.Id_cliente);
+                });
+
+                // Agregar botones a la celda de acciones
+                accionesCell.appendChild(botonEditar);
+                accionesCell.appendChild(botonBorrar);
+
+                // Agregar celdas a la fila
+                fila.appendChild(idClienteCell);
+                fila.appendChild(nombreCell);
+                fila.appendChild(apellidoCell);
+                fila.appendChild(concesionarioIdCell);
+                fila.appendChild(accionesCell);
+
+                // Agregar la fila a la tabla
+                tablaBody.appendChild(fila);
+            });
+        }
+
+        function borrarCliente(idCliente) {
+            var urlBorrar = 'http://localhost:3000/cliente/delete/' + idCliente;
+
+            fetch(urlBorrar, { method: 'DELETE' })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Cliente borrado:', data);
+                    obtenerDatos();
+                })
+                .catch(error => console.error('Error al borrar el cliente:', error));
+        }
+
+
+        function contarClientes() {
+            fetch('http://localhost:3000/contar/clientes')
+                .then(response => response.json())
+                .then(data => {
+                    // Imprime la respuesta completa para entender su estructura
+                    console.log('Respuesta del servidor:', data);
+
+                    const valorContador = parseInt(data.valor, 10);
+                    console.log(valorContador);
+
+                    // Actualizar el contenido del h3 con el nuevo valor
+                    document.getElementById('ctd-clientes').textContent = valorContador;
+                })
+                .catch(error => console.error('Error al obtener el valor:', error));
+        }
+
+
+
+        // Llamar a la función para obtener y mostrar los datos al cargar la página
+        obtenerDatos();
+        contarClientes();
 
     </script>
 </body>
